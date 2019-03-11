@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column="0" Click="Button_Click">Thêm thành viên</Button>
+        </Grid>
+        <DataGrid Name="dgView" Grid.Row="1" Loaded="DataGrid_Loaded">
+            
+        </DataGrid>
     </Grid>
 </Window>

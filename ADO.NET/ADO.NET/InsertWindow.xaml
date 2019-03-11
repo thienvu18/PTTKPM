@@ -1,0 +1,79 @@
+﻿<Window x:Class="ADO.NET.InsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO.NET"
+        mc:Ignorable="d"
+        Title="Thêm thành viên" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label>Thành viên cũ:</Label>
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="tbThanhVienCu" Margin="0,0,0,10" KeyUp="tbThanhVienCu_KeyUp"/>
+            <TextBox x:Name="tbThanhVienCuId" Visibility="Collapsed" Text="_0"/>
+            <Border Width="298" Height="150" BorderBrush="Black"   
+                    BorderThickness="1" Visibility="Collapsed">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Name="resultStack"></StackPanel>
+                </ScrollViewer>
+            </Border>
+        </StackPanel>
+
+        <Label Grid.Row="1">Loại quan hệ:</Label>
+        <ComboBox x:Name="cbLoaiQuanHe" Grid.Row="1" Grid.Column="1" Margin="0,0,0,10" >
+            <ComboBoxItem Name="__0" IsSelected="True">Không có</ComboBoxItem>
+            <ComboBoxItem>Con</ComboBoxItem>
+            <ComboBoxItem>Vợ/Chồng</ComboBoxItem>
+        </ComboBox>
+
+        <Label  Grid.Row="2">Ngày phát sinh:</Label>
+        <local:CustomDatePicker x:Name="dpNgayPhatSinh" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10" WatermarkText="Chọn ngày"/>
+
+        <Label Grid.Row="3">Họ và tên:</Label>
+        <TextBox x:Name="tbHoVaTen" Grid.Row="3" Grid.Column="1" Margin="0,0,0,10" />
+
+        <Label Grid.Row="4">Giới tính:</Label>
+        <ComboBox x:Name="cbGioiTinh" Grid.Row="4" Grid.Column="1" Margin="0,0,0,10" IsEditable="True">
+            <ComboBoxItem IsSelected="True">Nam</ComboBoxItem>
+            <ComboBoxItem>Nữ</ComboBoxItem>
+        </ComboBox>
+
+        <Label  Grid.Row="5">Ngày giờ sinh:</Label>
+        <local:CustomDatePicker x:Name="dpNgayGioSinh" Grid.Row="5" Grid.Column="1" Margin="0,0,0,10" WatermarkText="Chọn ngày"/>
+
+        <Label Grid.Row="6">Quê quán:</Label>
+        <TextBox x:Name="tbQueQuan" Grid.Row="6" Grid.Column="1" Margin="0,0,0,10" />
+
+        <Label Grid.Row="7">Nghề nghiệp:</Label>
+        <TextBox x:Name="tbNgheNghiep" Grid.Row="7" Grid.Column="1" Margin="0,0,0,10" />
+
+        <Label Grid.Row="8">Địa chỉ:</Label>
+        <TextBox x:Name="tbDiaChi" Grid.Row="8" Grid.Column="1" Margin="0,0,0,10" />
+
+        <Grid Grid.Row="9" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button Click="Button_Click_1">OK</Button>
+            <Button Grid.Column="1" Click="Button_Click">Cancel</Button>
+        </Grid>
+    </Grid>
+</Window>
