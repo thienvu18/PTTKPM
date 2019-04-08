@@ -24,5 +24,31 @@ namespace BT04
         {
             InitializeComponent();
         }
+
+        private void DongHoDienTu_OnDesiredTime()
+        {
+            MessageBox.Show("Đã đến giờ hẹn trước, bấm OK để kết thúc chương trình");
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
+        {
+            digitalTimer.start();
+        }
+
+        private void BtnStop_Click(object sender, RoutedEventArgs e)
+        {
+            digitalTimer.stop();
+        }
+
+        private void BtnPause_Click(object sender, RoutedEventArgs e)
+        {
+            digitalTimer.pause();
+        }
+
+        private void BtnResume_Click(object sender, RoutedEventArgs e)
+        {
+            digitalTimer.resume();
+        }
     }
 }

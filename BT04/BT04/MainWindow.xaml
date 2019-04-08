@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        <local:DongHoDienTu x:Name="digitalTimer" Grid.Row="0" Minute="00" Second="00" DesiredTime="00:05" OnDesiredTime="DongHoDienTu_OnDesiredTime"></local:DongHoDienTu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="btnStart" Grid.Column="0" Click="BtnStart_Click">Start</Button>
+            <Button Name="btnStop" Grid.Column="1" Click="BtnStop_Click">Stop</Button>
+            <Button Name="btnPause" Grid.Column="2" Click="BtnPause_Click">Pause</Button>
+            <Button Name="btnResume" Grid.Column="3" Click="BtnResume_Click">Resume</Button>
+        </Grid>
     </Grid>
 </Window>

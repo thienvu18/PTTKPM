@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="BT04.DongHoDienTu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BT04"
+             mc:Ignorable="d" 
+             d:DesignHeight="22" d:DesignWidth="85">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Name="igMinuteFirstPart" Grid.Column="0" Source="Resources/0.png"/>
+        <Image Name="igMinuteSecondPart" Grid.Column="1"  Source="Resources/0.png"/>
+        <Image Name="igSeparator" Grid.Column="2" Source="Resources/-.png"/>
+        <Image Name="igSecondFirstPart" Grid.Column="3" Source="Resources/0.png" />
+        <Image Name="igSecondSecondPart" Grid.Column="4" Source="Resources/0.png"/>
+    </Grid>
+</UserControl>
